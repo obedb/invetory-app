@@ -1,0 +1,17 @@
+<h1 class="backgroundkala"></h1>
+<h2 class="row"> Hey I need data to show on this page !</h2>
+
+<div class="row">
+  <%@inventories.each_slice(3) do |three| %>
+  <div class=row>
+    <% three.each do |invento| %>
+    <div class="col-md-4">
+      <h3><%=link_to invento.name, "/inventories/#{invento.id}"%></h3>
+      <h3> Description<%= invento.description%></h3>
+      <h3> Satarting Date <%=invento.start%></h3>
+      <h3>Finishing Date <%=invento.finish%></h3>
+    </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>

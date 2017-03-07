@@ -1,0 +1,26 @@
+<body class="form">
+
+<h1> Hey! I need a form to add a new inventory </h1>
+
+
+<%= form_tag "/inventories", method: :post do %>
+<div> 
+  <b>Name </b> <input type="text" class="form-control" name="name" placeholder="Text input">
+ </div>
+
+<div><b> Description</b><input type="ext" class="form-control" name="description" placeholder="text input"></div>
+<div> 
+  <b> Starting Date </b> <input  class="form-control" type="date" name="start" placeholder="Date input">
+</div>
+
+<div> 
+  <b> Finish Date </b> <input class="form-control" type="date" name="finish" placeholder="Date input">
+</div>
+<div>
+  <br>
+
+</div>
+
+<input class="fill" type="submit" value="Add inventory">
+
+<% end %>

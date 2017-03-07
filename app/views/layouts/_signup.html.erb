@@ -1,0 +1,105 @@
+<%= form_tag '/users', method: :post do %>
+      <legend class="form">Please Sign Up </legend>
+  <form class="form-horizontal">
+    <fieldset>
+      
+
+
+        <div class="form-group">
+          <label type="text" name="first_name" class="col-md-4 control-label" for="first_name">First name</label>
+          <div class="col-md-4">
+            <input id="fn" name="first_name" type="text" placeholder="first name" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label type="text" name="last_name" class="col-md-4 control-label" for="last_name">Last name</label>  
+          <div class="col-md-4">
+            <input id="ln" name="last_name" type="text" placeholder="last name" class="form-control input-md" required="">
+
+          </div>
+        </div>
+        <div class="form-group">
+          <label type="number" name="phone_number" class="col-md-4 control-label" for="phone number">Phone Number</label>  
+          <div class="col-md-4">
+            <input id="cmpny" name="phone_number" type="text" placeholder="phone number" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label type="text" name="email" class="col-md-4 control-label" for="email">Email</label>  
+          <div class="col-md-4">
+            <input id="email" name="email" type="text" placeholder="email" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label type="password" name="password" class="col-md-4 control-label" for="password"> Password </label>  
+          <div class="col-md-4">
+            <input id="add1" name="password" type="password" placeholder="password" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label type="password" name="password_confirmation" class="col-md-4 control-label" for="password_confirmation"> Retype Password </label>  
+          <div class="col-md-4">
+            <input id="add2" name="password_confirmation"" type="password" placeholder="retype password" class="form-control input-md">
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label type="text" name="country" class="col-md-4 control-label" for="country">Country</label>  
+          <div class="col-md-4">
+            <input id="city" name="country" type="text" placeholder="country" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label type="text" name="province_state" class="col-md-4 control-label" for="province_state">State/Province</label>  
+          <div class="col-md-4">
+            <input id="zip" name="province_state" type="text" placeholder="Province or State" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label type="text" name="village" class="col-md-4 control-label" for="village">Village/Cell</label>  
+          <div class="col-md-4">
+            <input id="ctry" name="village" type="text" placeholder="Umudugudu or Akagali" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label type="text" name="house_number" class="col-md-4 control-label" for="house_number">House No</label>  
+          <div class="col-md-4">
+            <input id="phone" name="house_number" type="text" placeholder="house number" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-4">
+            <button id="submit" name="submit" class="btn btn-primary">SUBMIT</button>
+          </div>
+        </div>
+
+
+    </fieldset>
+  </form>
+      <% end %>

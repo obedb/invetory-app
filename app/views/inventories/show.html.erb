@@ -1,0 +1,22 @@
+<body class="row">
+<h3 > Please change show  with and Id number of the product you want me to show! </h3>
+  <h4> Don't forget to add a button that will allow me to edit and to destroy </h4>
+
+  <h1> Below is the list description of the product you want </h1>
+
+  <h3>Name: <%=@inventory.name%> </h3>
+  <h3> Description: <%=@inventory.description%></h3>
+  <h3>Start: <%=@inventory.start%> </h3>
+  <h3>Finish: <%=@inventory.finish%> </h3>
+
+  <%= form_tag "/inventories/#{@inventory.id}", method: :delete do %>
+  <input class="btn btn-warning" type="submit" value="Delete"></input>
+  <% end -%>
+  <%= form_tag "/inventories/#{@inventory.id}/edit", method: :get do %>
+  <input class="btn btn-warning" type="submit" value="Edit"></input>
+  
+  <% end -%>
+
+  </body>
+
+
