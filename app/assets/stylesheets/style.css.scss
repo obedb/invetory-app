@@ -1,3 +1,14 @@
+
+
+.home{
+   background-image: asset-url("homepage.png");
+   text-decoration: #1E8449;
+}
+
+.blog{
+  background-color: #F7F9F9;
+}
+
 $navbar-default-bg: #F5DEB3;
 
 #logo{
@@ -13,11 +24,9 @@ $navbar-default-bg: #F5DEB3;
 }
 
 .jumbotron{
-  background-image: asset-url("background.jpg");
   background-size: cover;
   height: 550px;
 }
-
 
 
 body {
@@ -58,3 +67,7 @@ body {
 .row{
  color :#FDFEFE;
 }
+
+/*Login Page*/
+
+
