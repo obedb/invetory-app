@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end 
 
   def create
-    user = User.new(
+    @user = User.new(
       first_name: params[:first_name],
       last_name: params[:last_name],
       phone_number: params[:phone_number],
@@ -16,8 +16,8 @@ class UsersController < ApplicationController
       village: params[:village],
       house_number: params[:house_number]
       )
-    user.save
-
+    @user.save
+    UserMailer.signup_confirmation(@user).deliver_now
     redirect_to '/inventories'
 
   end 

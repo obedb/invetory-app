@@ -1,17 +1,40 @@
-<h1 class="backgroundkala"></h1>
-<h2 class="row"> Hey I need data to show on this page !</h2>
+<% if current_user %>
+  <h2 style="color:#1E8449;" class="center row"> List of All Inventories </h2>
 
-<div class="row">
-  <%@inventories.each_slice(3) do |three| %>
-  <div class=row>
-    <% three.each do |invento| %>
-    <div class="col-md-4">
-      <h3><%=link_to invento.name, "/inventories/#{invento.id}"%></h3>
-      <h3> Description<%= invento.description%></h3>
-      <h3> Satarting Date <%=invento.start%></h3>
-      <h3>Finishing Date <%=invento.finish%></h3>
-    </div>
-    <% end %>
-  </div>
+  
+    <% current_user.inventories.each do |invento| %>
+      <div class="row">
+       <div class="col-xs-8 col-xs-offset-2">
+        <div class="well well-lg">
+          <div class="inventories-title">
+            <%=link_to invento.name, "/inventories/#{invento.id}"%>
+          </div>
+          <div class="inventory-body">
+            <%= truncate(invento.description, length: 100) %></h3>
+             <div> <%=invento.start%></div>
+              <div> <%=invento.finish%></div>
+              
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= invento.percentage_time_finished %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= invento.percentage_time_finished %>%">
+                <div> <%= invento.percentage_time_finished %> completed </div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="inventory-actions">
+            <%= link_to "Edit This Inventory", "/inventories/#{invento.id}/edit", class: "btn btn-xs btn-primary" %>
+            <%= link_to "Delete This Inventory", "/inventories/#{invento.id}", method: :delete, 
+                                                  class: "btn btn-xs btn-danger" %>
+          </div>
+        </div>
+      </div>
+     </div>
   <% end %>
-</div>
+  <% else %>
+    <h2 style="color:#1E8449;" class="center row"> Please <%= link_to "Login", "/login" %> or <%= link_to "Sign Up", "/signup" %> </h2>
+
+
+<% end -%>
+
+
+  

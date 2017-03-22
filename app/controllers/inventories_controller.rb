@@ -1,5 +1,6 @@
 class InventoriesController < ApplicationController
-  
+before_action :authenticate_with_http_digest
+
   def index
     @inventories = Inventory.all
     
@@ -10,7 +11,8 @@ class InventoriesController < ApplicationController
       name: params[:name],
       description: params[:description],
       start: params[:start],
-      finish: params[:finish]
+      finish: params[:finish],
+      user_id: current_user.id 
       })
     @inventory.save
     flash[:success] = "New Inventory Added"
@@ -38,13 +40,13 @@ class InventoriesController < ApplicationController
 
   def update
     @inventory = Inventory.find_by(id: params[:id])
-    @inventory.assign_attributes({
+    @inventory.update({
       name: params[:name],
       description: params[:description],
       start: params[:start],
-      finish: params[:finish]
+      finish: params[:finish],
+      user_id: current_user.id
       })
-    @inventory.save
     flash[:success] = "Inventory Updated!!"
     redirect_to "/inventories/#{@inventory.id}"
     

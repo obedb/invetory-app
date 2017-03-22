@@ -64,8 +64,29 @@ body {
     margin-bottom: 1em;
 }
 
-.row{
- color :#FDFEFE;
+
+
+.inventory-actions{
+  border-top: 1px solid #17202A;
+  padding-top: 5px;
+
+}
+.description{
+  margin-top: 0;
+}
+
+.inventories-title{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.inventory-body{
+  border-top: 1px solid #17202A;
+  padding-top: 15px;
+}
+
+.bar{
+  border-top: 1px solid #17202A;
 }
 
 /*Login Page*/

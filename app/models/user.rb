@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-  has_many :inventory 
+  has_secure_password
+  has_many :inventories 
 end
