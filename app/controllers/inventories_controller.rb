@@ -16,7 +16,7 @@ before_action :authenticate_with_http_digest
       user_id: current_user.id 
       })
     @inventory.save
-    UserMailer.signup_confirmation(@user).deliver_now
+    UserMailer.add_inventory(@user).deliver_now
 
     flash[:success] = "New Inventory Added"
     redirect_to "/inventories"
@@ -30,7 +30,9 @@ before_action :authenticate_with_http_digest
   end
 
   def edit
+    @user = current_user
     @inventory = Inventory.find_by(id: params[:id])
+    UserMailer.edited_inventory(@user).deliver_now
     
   end
 
@@ -56,9 +58,12 @@ before_action :authenticate_with_http_digest
   end
 
   def destroy
+    @user = current_user
     @inventory = Inventory.find_by(id: params[:id])
+    UserMailer.deleted_inventory(@user).deliver_now
     @inventory.destroy
     flash[:danger] = "Inventory destroyed!!!"
     redirect_to "/inventories"
+    
   end
 end

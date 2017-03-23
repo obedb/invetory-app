@@ -7,10 +7,21 @@ class UserMailer < ApplicationMailer
     mail to: @user.email, subject: 'Signed Up'
   end
 
-  def item_finished(user, inventory)
+  def add_inventory(user)
     @user = user
-    @inventory = inventory
 
-    mail to: @user.email, subject: 'Item about to finish'
+    mail to: @user.email, subject: 'Added Inventory'
+  end
+
+  def edited_inventory(user)
+    @user = user
+
+    mail to: @user.email, subject: 'Edited Inventory'  
+  end
+
+  def deleted_inventory(user)
+    @user = user
+    mail to: @user.email, subject: 'Deleted Inventory'
+    
   end
 end
