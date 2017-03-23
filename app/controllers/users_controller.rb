@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       )
     @user.save
     UserMailer.signup_confirmation(@user).deliver_now
-    redirect_to '/inventories'
+    redirect_to '/inventories/new'
 
   end 
 end

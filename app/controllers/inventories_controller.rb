@@ -7,6 +7,7 @@ before_action :authenticate_with_http_digest
   end
 
   def create
+    @user = current_user
     @inventory = Inventory.new({
       name: params[:name],
       description: params[:description],
@@ -15,6 +16,8 @@ before_action :authenticate_with_http_digest
       user_id: current_user.id 
       })
     @inventory.save
+    UserMailer.signup_confirmation(@user).deliver_now
+
     flash[:success] = "New Inventory Added"
     redirect_to "/inventories"
 

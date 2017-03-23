@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       redirect_to '/inventories'
     else
       flash[:warning] = "Invald email or passward"
-      redirect_to '/login'
+      redirect_to '/inventories/new'
     end 
   end
 

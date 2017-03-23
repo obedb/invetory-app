@@ -21,6 +21,7 @@
                 </div>
               </div>
 
+
             <div class="inventory-actions">
             <%= link_to "Edit This Inventory", "/inventories/#{invento.id}/edit", class: "btn btn-xs btn-primary" %>
             <%= link_to "Delete This Inventory", "/inventories/#{invento.id}", method: :delete, 
@@ -29,10 +30,10 @@
         </div>
       </div>
      </div>
+
   <% end %>
   <% else %>
     <h2 style="color:#1E8449;" class="center row"> Please <%= link_to "Login", "/login" %> or <%= link_to "Sign Up", "/signup" %> </h2>
-
 
 <% end -%>
 
