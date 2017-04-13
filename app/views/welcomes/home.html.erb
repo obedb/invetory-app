@@ -3,113 +3,62 @@
 <head>
   <title></title>
 </head>
-<body class="home">
+<body >
+<div class="home">
+<div class="border row">
+  <div class="border col-sm-6">
+   <h1 style="color:#F4F6F7;" class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white">A Web Application<br>That Manages <br> Your Inventories</h1> <br>
 
-        <div class="s-swiper js__swiper-one-item">
-            <!-- Swiper Wrapper -->
-            <div class="swiper-wrapper">
-                <div class="g-fullheight--xs g-bg-position--center swiper-slide">
-                    <div class="container g-text-center--xs g-ver-center--xs">
-                        <div class="g-margin-b-30--xs">
-                            <h1 style="color:#1E8449;" class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white">A Web Application<br>That Manages <br> Home Inventories</h1>
-                        </div>
-                        <a class="js__popup__youtube" href="https://www.youtube.com/watch?v=lcFYdgZKZxY" title="Intro Video">
-                            <i class="s-icon s-icon--lg s-icon--white-bg g-radius--circle ti-control-play"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="g-fullheight--xs g-bg-position--center swiper-slide">
-                    <div class="container g-text-center--xs g-ver-center--xs">
-                        <div class="g-margin-b-30--xs">
-                            <div class="g-margin-b-30--xs">
-                                <h2  style="color:#1E8449;" class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white">We Help You Know When<br>To Go For Shopping<br></h2>
-                            </div>
-                            <div>
-                            <% if current_user %>
-                            
-                            <li><button class = "btn btn-notice"><%= link_to "logout", "/logout", method: :delete %></button></li>
-                            <% else %><br>
-                            <li><button class = "btn btn-notice"> <%= link_to "Sign Up", "/signup" %></button></li><br>
-  
-                            </div>
-                              <div> 
-                              <li><button class = "btn btn-notice"> <%= link_to "Login", "/login" %></button></li>
-                              <% end -%>
-                              </div>
-                            <a class="js__popup__youtube" href="https://www.youtube.com/watch?v=lcFYdgZKZxY" title="Intro Video">
-                                <i class="s-icon s-icon--lg s-icon--white-bg g-radius--circle ti-control-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+   <h2  style="color:#F4F6F7;" class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white">We Help You Know When<br>To Go For Shopping<br></h2>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="blog">
-<div class="container g-padding-y-80--xs g-padding-y-125--sm">
-    <div class="g-text-center--xs g-margin-b-80--xs">
-        
-        <h2 style="color:#1E8449"; class="g-font-size-32--xs g-font-size-36--md">Latest News</h2>
-    </div>
-    <div class="row">
-        <div class="col-sm-4 g-margin-b-30--xs g-margin-b-0--md">
-            <!-- News -->
-            <article>
-                <img src="obed/actualise/invetory-app/app/assets/images/homepage.png" alt="Image">
-                <div class="g-bg-color--white g-box-shadow__dark-lightest-v2 g-text-center--xs g-padding-x-40--xs g-padding-y-40--xs">
-                    <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2">News</p>
-                    <h3 class="g-font-size-22--xs g-letter-spacing--1"><a href="http://keenthemes.com/">Create Something Great.</a></h3>
-                    <p>The time has come to bring those ideas and plans to life.</p>
-                </div>
-            </article>
-            <!-- End News -->
-        </div>
-        <div class="col-sm-4 g-margin-b-30--xs g-margin-b-0--md">
-            <!-- News -->
-            <article>
-                <img class="img-responsive" src="img/homepage.png" alt="Image">
-                <div class="g-bg-color--white g-box-shadow__dark-lightest-v2 g-text-center--xs g-padding-x-40--xs g-padding-y-40--xs">
-                    <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2">News</p>
-                    <h3 class="g-font-size-22--xs g-letter-spacing--1"><a href="http://keenthemes.com/">Jacks of All. Experts in All.</a></h3>
-                    <p>The time has come to bring those ideas and plans to life.</p>
-                </div>
-            </article>
-            <!-- End News -->
-        </div>
-        <div class="col-sm-4">
-            <!-- News -->
-            <article>
-                <img class="img-responsive" src="img/970x970/03.jpg" alt="Image">
-                <div class="g-bg-color--white g-box-shadow__dark-lightest-v2 g-text-center--xs g-padding-x-40--xs g-padding-y-40--xs">
-                    <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2">News</p>
-                    <h3 class="g-font-size-22--xs g-letter-spacing--1"><a href="http://keenthemes.com/">Finding your Perfect Place.</a></h3>
-                    <p>The time has come to bring those ideas and plans to life.</p>
-                </div>
-            </article>
-            <!-- End News -->
-        </div>
-    </div>
+   <div>
+    <% if current_user %>
+    
+    <li><button class = "btn btn-notice"><%= link_to "Logout", "/logout", method: :delete %></button></li>
+    <% else %><br>
+    <li><button class = "btn btn-notice"> <%= link_to "Sign Up", "/signup" %></button></li><br>
+
 </div>
+<div> 
+  <li><button class = "btn btn-notice"> <%= link_to "Login", "/login" %></button></li>
+  <% end -%>
 </div>
 
+   </div>
+  <div class="border col-sm-6"><%= image_tag ("option.png"), :class => "obed" %> </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="border row">
+  <div class="border col-sm-6"><%= image_tag ("merged.png"), :class => "obed" %> </div>
+  <div class="border col-sm-6">
+     <h3>CULTURE</h3> 
+     <h1>About Event</h1>
+     <p>We aim high at being focused on building relationships with our clients and community.</p> 
+     <p> Using our creative gifts drives this foundation.</p>
+
+
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+
+<div class="border row">
+  <div class="border col-sm-6">
+     <h3>CULTURE</h3> 
+     <h1>About Event</h1> 
+     <p> We aim high at being focused on building relationships with our clients and community. Using our creative gifts drives this foundation </p>
+     
+  </div>
+  <div class="border col-sm-6"><%= image_tag ("merged.png"), :class => "obed" %> </div>
+</div>
 </body>
-</html>
-  
-  

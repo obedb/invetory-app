@@ -1,7 +1,6 @@
 
 
 .home{
-   background-image: asset-url("homepage.png");
    text-decoration: #1E8449;
 }
 
@@ -89,6 +88,50 @@ body {
   border-top: 1px solid #17202A;
 }
 
+
+
+
+.tag {
+    width: 200px;
+    height: 275px;
+    padding: 10px !important;
+   margin: 10px !important;
+   
+
+
+}
+
+.obed {
+    width: 600px;
+    height: 413px;
+  padding: 25px !important;
+   margin: 5px !important;
+}
+
+.obedb {
+    width: 400px;
+    height: 550px;
+  padding: 25px !important;
+   margin: 5px !important;
+}
+
+
 /*Login Page*/
+
+
+h1 {
+    color: #FDFEFE;
+    text-indent: 25px;
+}
+h3 {
+    color: #FDFEFE;
+    text-indent: 25px;
+}
+
+p {
+    color: #FDFEFE;
+    text-indent: 1.5;
+    margin-top: 0
+}
 
 

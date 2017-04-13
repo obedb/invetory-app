@@ -12,7 +12,6 @@ class Inventory < ApplicationRecord
       all_time = (finish - start).to_i
       percentage_time_done = (time_passed * 100)/ all_time
       return percentage_time_done
-
     end 
   end
 end

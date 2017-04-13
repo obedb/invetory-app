@@ -11,8 +11,8 @@
           </div>
           <div class="inventory-body">
             <%= truncate(invento.description, length: 100) %></h3>
-             <div> <%=invento.start%></div>
-              <div> <%=invento.finish%></div>
+             <div> Start: <%=invento.start%></div>
+              <div> Finish: <%=invento.finish%></div>
               
               <div class="progress">
                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= invento.percentage_time_finished %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= invento.percentage_time_finished %>%">

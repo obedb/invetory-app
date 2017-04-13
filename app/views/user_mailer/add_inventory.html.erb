@@ -1,2 +1,4 @@
-<h1> <%=@user.first_name%></h1>
-<p> You have add a new inventory</p>
+<h3> Hi <%=@user.first_name%>,</h3>
+<p> This is to let you know that you have added a new inventory. Clikd on the link below if you want to see it on browser.
+</p>
+<%= link_to "View All Inventories", "/inventories", class: "btn btn-xs btn-success" %>
